@@ -1,0 +1,57 @@
+<div class='container-fluid'>
+    <div class='row fixed-header'>
+        <div class='col-sm-1'>
+            <li class="dropdown">
+                <a class="dropbtn" routerLink=''>  Почетак  </a>
+                <div class="dropdown-content">
+                    <a routerLink='pocetak1'>  Државе  </a>
+                    <a routerLink='pocetak2'>  Спортисти  </a>
+                </div>
+            </li>
+        </div>
+        <div class='col-sm-1'>
+            <li class="dropdown">
+                <button class="dropbtn jednoDugme1" (click)='odrediProfil()'>  Профил  </button>
+                <div class="dropdown-content">
+                    <a>
+                        <button class="jednoDugme" (click)='odrediProfil()'>
+                            <div *ngIf='imamoKorisnika; then korProf else ulogujSe'></div>
+                            <ng-template #ulogujSe>  Улогујте се  </ng-template>
+                            <ng-template #korProf>  Налог: {{korisnik.username}}  </ng-template>
+                        </button>
+                    </a>
+                    <a routerLink='register'>  Регистрација  </a>
+                    <a routerLink='promena'>  Промена лозинке  </a>
+                    <a>
+                        <button class='jednoDugme' (click)='odjaviSe()'>  Одјави се  </button>
+                    </a>
+                </div>
+            </li>
+        </div>
+        <!--div class='col-sm-1'>
+            <li class="dropdown">
+                <a class="dropbtn" routerLink=''>Dropdown</a>
+                <div class="dropdown-content">
+                    <a>Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+        </div-->
+    </div>
+    <div class='row'>
+        <div class='main-page col-sm-12'>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class='row fixed-footer'>
+        <table>
+            <tr>
+                <td><img height="30" src='assets/olimpic.png'></td>
+                <td>
+                    <div class='footer-text'>Страница за организовање и праћење такмичења у оквиру Летљих олимпијских игара Токио 2021.</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
