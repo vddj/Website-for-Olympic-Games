@@ -1,0 +1,193 @@
+
+{
+    "_id" : ObjectId("61322bcc213da3ce886157b1"),
+    "username" : "admin",
+    "password" : "123",
+    "ime" : "admin",
+    "prezime" : "admin",
+    "nacionalnost" : "admin",
+    "mail" : "admin",
+    "type" : "1",
+    "odobrenje" : 1
+}
+
+{
+    "_id" : ObjectId("614f97fad017c412e478ce72"),
+    "username" : "delegat1",
+    "ime" : "Никола",
+    "prezime" : "Петровић",
+    "mail" : "nidza@gmail.com",
+    "password" : "123",
+    "nacionalnost" : "Пољска",
+    "type" : 2,
+    "odobrenje" : 1,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("614f981cd017c412e478ce73"),
+    "username" : "delegat2",
+    "ime" : "Филип",
+    "prezime" : "Петровић",
+    "mail" : "fica@gmail.com",
+    "password" : "123",
+    "nacionalnost" : "Шпанија",
+    "type" : 2,
+    "odobrenje" : 1,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f983bd017c412e478ce74"),
+    "username" : "delegat3",
+    "ime" : "Немања",
+    "prezime" : "Пешић",
+    "mail" : "neca@gmail.com",
+    "password" : "Asdf12!@y",
+    "nacionalnost" : "Шпанија",
+    "type" : 2,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f985bd017c412e478ce76"),
+    "username" : "delegat4",
+    "ime" : "Мирослав",
+    "prezime" : "Петковић",
+    "mail" : "mica@gmail.com",
+    "password" : "Asdf12!@y",
+    "nacionalnost" : "Швајцарска",
+    "type" : 2,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9892d017c412e478ce78"),
+    "username" : "vodja1",
+    "ime" : "Самуел",
+    "prezime" : "Петковић",
+    "mail" : "sami@gmail.com",
+    "password" : "123",
+    "nacionalnost" : "Италија",
+    "type" : 3,
+    "odobrenje" : 1,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f98f4d017c412e478ce79"),
+    "username" : "vodja2",
+    "ime" : "Урош",
+    "prezime" : "Николић",
+    "mail" : "uki@gmail.com",
+    "password" : "123",
+    "nacionalnost" : "Србија",
+    "type" : 3,
+    "odobrenje" : 1,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f991bd017c412e478ce7a"),
+    "username" : "vodja3",
+    "ime" : "Родригез",
+    "prezime" : "Мањана",
+    "mail" : "rodri@gmail.com",
+    "password" : "Asdf12!@s",
+    "nacionalnost" : "Шпанија",
+    "type" : 3,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9947d017c412e478ce7b"),
+    "username" : "vodja4",
+    "ime" : "Самуел",
+    "prezime" : "Бекет",
+    "mail" : "smBe@gmail.com",
+    "password" : "Asdf12!@d",
+    "nacionalnost" : "Нови Зеланд",
+    "type" : 3,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9999d017c412e478ce7c"),
+    "username" : "vodja5",
+    "ime" : "Емануела",
+    "prezime" : "Рандеву",
+    "mail" : "ema@gmail.com",
+    "password" : "Asdf12!@d",
+    "nacionalnost" : "Француска",
+    "type" : 3,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f99b1d017c412e478ce7d"),
+    "username" : "vodja6",
+    "ime" : "Ема",
+    "prezime" : "Рандеву",
+    "mail" : "ema@gmail.com",
+    "password" : "Asdf12!@d",
+    "nacionalnost" : "Швајцарска",
+    "type" : 3,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9a23d017c412e478ce7e"),
+    "username" : "delegat5",
+    "ime" : "Николос",
+    "prezime" : "Пападополу",
+    "mail" : "nikos@gmail.com",
+    "password" : "Asdf12!@d",
+    "nacionalnost" : "Грчка",
+    "type" : 3,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9c1bd017c412e478ce7f"),
+    "username" : "delegat6",
+    "ime" : "Десимир",
+    "prezime" : "Тончев",
+    "mail" : "deki@yahoo.com",
+    "password" : "Deki100*(",
+    "nacionalnost" : "Бугарска",
+    "type" : 2,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9c4bd017c412e478ce80"),
+    "username" : "vodja7",
+    "ime" : "Десa",
+    "prezime" : "Тончевa",
+    "mail" : "deki123@yahoo.com",
+    "password" : "Deki100*(g",
+    "nacionalnost" : "Бугарска",
+    "type" : 3,
+    "odobrenje" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614f9e1ad017c412e478ce81"),
+    "username" : "vodja8",
+    "ime" : "Саки",
+    "prezime" : "Јакомото",
+    "mail" : "saki@yahoo.com",
+    "password" : "Nije123$%^",
+    "nacionalnost" : "Јапан",
+    "type" : 3,
+    "odobrenje" : 1,
+    "__v" : 0
+}

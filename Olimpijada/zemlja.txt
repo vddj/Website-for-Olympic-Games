@@ -1,0 +1,507 @@
+
+{
+    "_id" : ObjectId("612ff3cd213da3ce8861247a"),
+    "id" : "28",
+    "ime" : "Србија",
+    "rang" : "28",
+    "br_zlato" : 5,
+    "br_srebro" : "1",
+    "br_bronza" : "5",
+    "br_ukupno" : 11,
+    "br_sportista" : "28",
+    "vodja" : "n"
+}
+
+{
+    "_id" : ObjectId("612ff429213da3ce8861248d"),
+    "id" : "1",
+    "ime" : "Сједињене Америчке Државе",
+    "rang" : "1",
+    "br_zlato" : 39,
+    "br_srebro" : "41",
+    "br_bronza" : 33,
+    "br_ukupno" : 113,
+    "br_sportista" : "5",
+    "vodja" : "n"
+}
+
+{
+    "_id" : ObjectId("612ff484213da3ce886124ac"),
+    "id" : "2",
+    "ime" : "Кина",
+    "rang" : "2",
+    "br_zlato" : "38",
+    "br_srebro" : 33,
+    "br_bronza" : "18",
+    "br_ukupno" : 89,
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("612ff4f6213da3ce886124bb"),
+    "id" : "3",
+    "ime" : "Јапан",
+    "rang" : "3",
+    "br_zlato" : "27",
+    "br_srebro" : "14",
+    "br_bronza" : 18,
+    "br_ukupno" : 59,
+    "br_sportista" : "6",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("612ff538213da3ce886124c4"),
+    "id" : "4",
+    "ime" : "Уједињено Краљевство",
+    "rang" : "4",
+    "br_zlato" : "22",
+    "br_srebro" : "21",
+    "br_bronza" : "22",
+    "br_ukupno" : "65",
+    "br_sportista" : "1",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("612ff56e213da3ce886124d2"),
+    "id" : "5",
+    "ime" : "Руска Федерација",
+    "rang" : "5",
+    "br_zlato" : "20",
+    "br_srebro" : "28",
+    "br_bronza" : 25,
+    "br_ukupno" : 73,
+    "br_sportista" : "3",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("612ff58e213da3ce886124d5"),
+    "id" : "6",
+    "ime" : "Аустралија",
+    "rang" : "6",
+    "br_zlato" : "17",
+    "br_srebro" : "7",
+    "br_bronza" : "22",
+    "br_ukupno" : "46",
+    "br_sportista" : "6",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61301d08213da3ce88612b9c"),
+    "id" : "7",
+    "ime" : "Холандија",
+    "rang" : "7",
+    "br_zlato" : "10",
+    "br_srebro" : "12",
+    "br_bronza" : "14",
+    "br_ukupno" : "36",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61301d2e213da3ce88612ba6"),
+    "id" : "8",
+    "ime" : "Француска",
+    "rang" : "8",
+    "br_zlato" : "10",
+    "br_srebro" : "12",
+    "br_bronza" : "11",
+    "br_ukupno" : "33",
+    "br_sportista" : 9,
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61301d5e213da3ce88612bb9"),
+    "id" : "9",
+    "ime" : "Немачка",
+    "rang" : "9",
+    "br_zlato" : "10",
+    "br_srebro" : 12,
+    "br_bronza" : "16",
+    "br_ukupno" : 38,
+    "br_sportista" : "1",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61301d8a213da3ce88612bcb"),
+    "id" : "10",
+    "ime" : "Италија",
+    "rang" : "10",
+    "br_zlato" : "10",
+    "br_srebro" : "10",
+    "br_bronza" : 21,
+    "br_ukupno" : 41,
+    "br_sportista" : 9,
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61301dc4213da3ce88612be8"),
+    "id" : "11",
+    "ime" : "Канада",
+    "rang" : "11",
+    "br_zlato" : "7",
+    "br_srebro" : "6",
+    "br_bronza" : "11",
+    "br_ukupno" : "24",
+    "br_sportista" : "1",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313644213da3ce88614127"),
+    "id" : "12",
+    "ime" : "Бразил",
+    "rang" : "12",
+    "br_zlato" : "7",
+    "br_srebro" : "6",
+    "br_bronza" : "8",
+    "br_ukupno" : "21",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("6131366e213da3ce88614138"),
+    "id" : "13",
+    "ime" : "Нови Зеланд",
+    "rang" : "13",
+    "br_zlato" : "7",
+    "br_srebro" : "6",
+    "br_bronza" : 8,
+    "br_ukupno" : 21,
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("6131368b213da3ce88614143"),
+    "id" : "14",
+    "ime" : "Куба",
+    "rang" : "14",
+    "br_zlato" : "7",
+    "br_srebro" : "3",
+    "br_bronza" : "5",
+    "br_ukupno" : "15",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("613136a8213da3ce8861414e"),
+    "id" : "15",
+    "ime" : "Мађарска",
+    "rang" : "15",
+    "br_zlato" : "6",
+    "br_srebro" : "7",
+    "br_bronza" : "7",
+    "br_ukupno" : "20",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("613136cd213da3ce8861415a"),
+    "id" : "16",
+    "ime" : "Јужна Кореја",
+    "rang" : "16",
+    "br_zlato" : "6",
+    "br_srebro" : "4",
+    "br_bronza" : "10",
+    "br_ukupno" : "20",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("613136e7213da3ce88614164"),
+    "id" : "17",
+    "ime" : "Пољска",
+    "rang" : "17",
+    "br_zlato" : "4",
+    "br_srebro" : 6,
+    "br_bronza" : "5",
+    "br_ukupno" : 15,
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313708213da3ce88614170"),
+    "id" : "18",
+    "ime" : "Чешка",
+    "rang" : "18",
+    "br_zlato" : "4",
+    "br_srebro" : "4",
+    "br_bronza" : "3",
+    "br_ukupno" : "11",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("613138f6213da3ce88614212"),
+    "id" : "19",
+    "ime" : "Кенија",
+    "rang" : "19",
+    "br_zlato" : "4",
+    "br_srebro" : "2",
+    "br_bronza" : "4",
+    "br_ukupno" : "10",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313913213da3ce8861421e"),
+    "id" : "20",
+    "ime" : "Норвешка",
+    "rang" : "20",
+    "br_zlato" : "4",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "8",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("6131392e213da3ce88614227"),
+    "id" : "21",
+    "ime" : "Јамајка",
+    "rang" : "21",
+    "br_zlato" : "4",
+    "br_srebro" : "1",
+    "br_bronza" : "4",
+    "br_ukupno" : "9",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313a75213da3ce8861428b"),
+    "id" : "19",
+    "ime" : "Кенија",
+    "rang" : "19",
+    "br_zlato" : "4",
+    "br_srebro" : "4",
+    "br_bronza" : "2",
+    "br_ukupno" : "10",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313a95213da3ce88614295"),
+    "id" : "20",
+    "ime" : "Норвешка",
+    "rang" : "20",
+    "br_zlato" : "4",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "8",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313aab213da3ce8861429e"),
+    "id" : "21",
+    "ime" : "Јамајка",
+    "rang" : "21",
+    "br_zlato" : "4",
+    "br_srebro" : "1",
+    "br_bronza" : "4",
+    "br_ukupno" : "9",
+    "br_sportista" : "1",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313b12213da3ce886142c6"),
+    "id" : "22",
+    "ime" : "Шпанија",
+    "rang" : "22",
+    "br_zlato" : "3",
+    "br_srebro" : "8",
+    "br_bronza" : "6",
+    "br_ukupno" : "17",
+    "br_sportista" : "1",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313b2d213da3ce886142d5"),
+    "id" : "23",
+    "ime" : "Шведска",
+    "rang" : "23",
+    "br_zlato" : "3",
+    "br_srebro" : "6",
+    "br_bronza" : "0",
+    "br_ukupno" : "9",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313b69213da3ce886142f0"),
+    "id" : "24",
+    "ime" : "Швајцарска",
+    "rang" : "24",
+    "br_zlato" : "3",
+    "br_srebro" : "4",
+    "br_bronza" : "6",
+    "br_ukupno" : "13",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313b8a213da3ce886142fb"),
+    "id" : "25",
+    "ime" : "Данска",
+    "rang" : "25",
+    "br_zlato" : "3",
+    "br_srebro" : "4",
+    "br_bronza" : "6",
+    "br_ukupno" : "13",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313bbb213da3ce8861430a"),
+    "id" : "26",
+    "ime" : "Хрватска",
+    "rang" : "26",
+    "br_zlato" : "3",
+    "br_srebro" : "3",
+    "br_bronza" : "2",
+    "br_ukupno" : "8",
+    "br_sportista" : "1",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("61313bdb213da3ce88614318"),
+    "id" : "27",
+    "ime" : "Иран",
+    "rang" : "27",
+    "br_zlato" : "3",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "7",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9a9e5c7fb8ab0c4720b7"),
+    "id" : "29",
+    "ime" : "Белгија",
+    "rang" : "29",
+    "br_zlato" : "2",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "6",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9ac05c7fb8ab0c4720c5"),
+    "id" : "30",
+    "ime" : "Бугарска",
+    "rang" : "30",
+    "br_zlato" : 4,
+    "br_srebro" : "0",
+    "br_bronza" : "2",
+    "br_ukupno" : 6,
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9adb5c7fb8ab0c4720d3"),
+    "id" : "31",
+    "ime" : "Словенија",
+    "rang" : "32",
+    "br_zlato" : "0",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "4",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9afd5c7fb8ab0c4720e5"),
+    "id" : "32",
+    "ime" : "Киргистан",
+    "rang" : "32",
+    "br_zlato" : "1",
+    "br_srebro" : "0",
+    "br_bronza" : "2",
+    "br_ukupno" : "3",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9b445c7fb8ab0c47210b"),
+    "id" : "33",
+    "ime" : "Грузија",
+    "rang" : "33",
+    "br_zlato" : "1",
+    "br_srebro" : "0",
+    "br_bronza" : "0",
+    "br_ukupno" : "1",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9b5d5c7fb8ab0c472114"),
+    "id" : "34",
+    "ime" : "Тајван",
+    "rang" : "34",
+    "br_zlato" : "0",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "4",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9b705c7fb8ab0c47211d"),
+    "id" : "35",
+    "ime" : "Турска",
+    "rang" : "35",
+    "br_zlato" : "0",
+    "br_srebro" : "2",
+    "br_bronza" : "2",
+    "br_ukupno" : "4",
+    "br_sportista" : "0",
+    "vodja" : "н"
+}
+
+{
+    "_id" : ObjectId("614f9b935c7fb8ab0c47212f"),
+    "id" : "36",
+    "ime" : "Грчка",
+    "rang" : "36",
+    "br_zlato" : "3",
+    "br_srebro" : 1,
+    "br_bronza" : "0",
+    "br_ukupno" : 4,
+    "br_sportista" : "0",
+    "vodja" : "н"
+}

@@ -1,0 +1,117 @@
+{
+    "_id" : ObjectId("6141d22b0f4fd01ba881a34c"),
+    "igraci" : [ 
+        "Немања Бјелица", 
+        "Владимир Штимац", 
+        "Никола Калинић"
+    ],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Србија",
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("614f376b5c7fb8ab0c46fe84"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Француска"
+}
+{
+    "_id" : ObjectId("614f37795c7fb8ab0c46fe91"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Немачка"
+}
+{
+    "_id" : ObjectId("614f378d5c7fb8ab0c46fe9c"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Уједињено Краљевство"
+}
+{
+    "_id" : ObjectId("614f37975c7fb8ab0c46fea1"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Италија"
+}
+{
+    "_id" : ObjectId("614f37a25c7fb8ab0c46feaf"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Мађарска"
+}
+{
+    "_id" : ObjectId("614f37ab5c7fb8ab0c46feb3"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Пољска"
+}
+{
+    "_id" : ObjectId("614f37b75c7fb8ab0c46febb"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Чешка"
+}
+{
+    "_id" : ObjectId("614f37cc5c7fb8ab0c46fec6"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Хрватска"
+}
+{
+    "_id" : ObjectId("614f37d45c7fb8ab0c46fed3"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Нови Зеланд"
+}
+{
+    "_id" : ObjectId("614f37dd5c7fb8ab0c46fed7"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Бразил"
+}
+{
+    "_id" : ObjectId("614f37f95c7fb8ab0c46fee5"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Данска"
+}
+{
+    "_id" : ObjectId("614f38015c7fb8ab0c46fee9"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Бугарска"
+}
+{
+    "_id" : ObjectId("614f38095c7fb8ab0c46fef0"),
+    "igraci" : [],
+    "sport" : "кошарка",
+    "disciplina" : "",
+    "pol" : "m",
+    "zemlja" : "Словенија"
+}

@@ -1,0 +1,811 @@
+
+{
+    "_id" : ObjectId("61310a9b213da3ce88613446"),
+    "ime" : "Новак Ђоковић",
+    "zemlja" : "Србија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "дубл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6134bbe9213da3ce88617692"),
+    "ime" : "Јусејн Болт",
+    "zemlja" : "Јамајка",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "100 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6134bc64213da3ce886176d5"),
+    "ime" : "Вајд ван Никерк",
+    "zemlja" : "Јужна Африка",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "400 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137b7ba213da3ce8861cb83"),
+    "ime" : "Лука Шапоњић",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137b7cb213da3ce8861cb8a"),
+    "ime" : "Сава Ранђеловић",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b7dd213da3ce8861cb9c"),
+    "ime" : "Стефан Митровић",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b806213da3ce8861cba1"),
+    "ime" : "Урош Вуковић",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b82a213da3ce8861cbae"),
+    "ime" : "Филип Филиповић",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b850213da3ce8861cbb9"),
+    "ime" : "Вања Удовичић",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137b87a213da3ce8861cbc7"),
+    "ime" : "Милош Ћук",
+    "zemlja" : "Србија",
+    "sport" : "ватерполо",
+    "pol" : "m",
+    "medalja" : "da",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b8bb213da3ce8861cbd2"),
+    "ime" : "Марко Симоновић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b8dc213da3ce8861cbdd"),
+    "ime" : "Стефан Бирчевић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137b8ec213da3ce8861cbe0"),
+    "ime" : "Милан Мачван",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b906213da3ce8861cbee"),
+    "ime" : "Немања Бјелица",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b916213da3ce8861cbf3"),
+    "ime" : "Владимир Штимац",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137b92d213da3ce8861cbff"),
+    "ime" : "Мирослав Радуљица",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b94d213da3ce8861cc0a"),
+    "ime" : "Милош Теодосић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b95e213da3ce8861cc0f"),
+    "ime" : "Никола Калинић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b981213da3ce8861cc1a"),
+    "ime" : "Богдан Богдановић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b9a6213da3ce8861cc1f"),
+    "ime" : "Сања Мандић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b9c5213da3ce8861cc2a"),
+    "ime" : "Ана Дабовић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137b9e9213da3ce8861cc2f"),
+    "ime" : "Александра Црвендакић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137ba04213da3ce8861cc3a"),
+    "ime" : "Јелена Миловановић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137ba23213da3ce8861cc44"),
+    "ime" : "Милица Дабовић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137ba3d213da3ce8861cc4f"),
+    "ime" : "Сања Мандић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137ba50213da3ce8861cc54"),
+    "ime" : "Дајана Бутуља",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137ba66213da3ce8861cc57"),
+    "ime" : "Сара Крњић",
+    "zemlja" : "Србија",
+    "sport" : "кошарка",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bb38213da3ce8861cc81"),
+    "ime" : "Емануеле Бирарели",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bb4d213da3ce8861cc8a"),
+    "ime" : "Симеоне Анцани",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+{
+    "_id" : ObjectId("6137bb60213da3ce8861cc95"),
+    "ime" : "Стефано Менгоци",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bb6f213da3ce8861cc98"),
+    "ime" : "Симеоне Бути",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bb7b213da3ce8861cc9d"),
+    "ime" : "Матео Пјано",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bb96213da3ce8861cca0"),
+    "ime" : "Ајмоне Алети",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bba2213da3ce8861ccab"),
+    "ime" : "Елија Боси",
+    "zemlja" : "Италија",
+    "sport" : "одбојка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bc58213da3ce8861ccd9"),
+    "ime" : "Роан Браунинг",
+    "zemlja" : "Аустралија",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10000 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bc9d213da3ce8861ccf5"),
+    "ime" : "Стивен Соломон",
+    "zemlja" : "Аустралија",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "400 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10000 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bcbc213da3ce8861ccfc"),
+    "ime" : "Питер Бол",
+    "zemlja" : "Аустралија",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "800 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "маратон",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "бацање копља",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bcd8213da3ce8861cd07"),
+    "ime" : "БАндере Обоја",
+    "zemlja" : "Аустралија",
+    "sport" : "атлетика",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "400 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10000 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bd09213da3ce8861cd16"),
+    "ime" : "Морган Мичел",
+    "zemlja" : "Аустралија",
+    "sport" : "атлетика",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "800 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "400 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bd34213da3ce8861cd1d"),
+    "ime" : "Метју Дени",
+    "zemlja" : "Аустралија",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "бацање диска",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bdcd213da3ce8861cd3d"),
+    "ime" : "Јошихиде Кирју",
+    "zemlja" : "Јапан",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100 метара трчање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200 метара трчање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137be0e213da3ce8861cd46"),
+    "ime" : "Јуки Хашиока",
+    "zemlja" : "Јапан",
+    "sport" : "атлетика",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "скок у даљ",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "скок у вис",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137be66213da3ce8861cd51"),
+    "ime" : "Јука Сато",
+    "zemlja" : "Јапан",
+    "sport" : "атлетика",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "бацање копља",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bebc213da3ce8861cd5e"),
+    "ime" : "Саки Такашима",
+    "zemlja" : "Јапан",
+    "sport" : "атлетика",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "20км брзо ходање",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "50км брзо ходање",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137bedd213da3ce8861cd67"),
+    "ime" : "Нанака Кори",
+    "zemlja" : "Јапан",
+    "sport" : "атлетика",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "бацање диска",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c0ab213da3ce8861cdcd"),
+    "ime" : "Руди Гобер",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c0c5213da3ce8861cddc"),
+    "ime" : "Еван Фурније",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+{
+    "_id" : ObjectId("6137c0d3213da3ce8861cde2"),
+    "ime" : "Нандо де Коло",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c0ed213da3ce8861cdec"),
+    "ime" : "Гранк Нтиликина",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c101213da3ce8861cdf7"),
+    "ime" : "Андре Албиси",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}

@@ -1,0 +1,248 @@
+
+{
+    "_id" : ObjectId("61320036213da3ce88614ea1"),
+    "sport" : "кошарка",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "vrsta" : "екипни",
+            "min_igraca" : "5",
+            "max_igraca" : "12"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("61320048213da3ce88614ea4"),
+    "sport" : "одбојка",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "vrsta" : "екипни",
+            "min_igraca" : "6",
+            "max_igraca" : "12"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6132005b213da3ce88614ea9"),
+    "sport" : "ватерполо",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "vrsta" : "екипни",
+            "min_igraca" : "6",
+            "max_igraca" : "13"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("613200b4213da3ce88614eae"),
+    "sport" : "атлетика",
+    "discipline" : [ 
+        {
+            "naziv" : "100 метара трчање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "штафетно трчање 100",
+            "vrsta" : "екипно",
+            "min_igraca" : "4",
+            "max_igraca" : "4"
+        }, 
+        {
+            "naziv" : "200 метара трчање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "400 метара трчање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "штафетно трчање 400",
+            "vrsta" : "екипно",
+            "min_igraca" : "4",
+            "max_igraca" : "4"
+        }, 
+        {
+            "naziv" : "800 метара трчање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "5000 метара трчање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "10000 метара трчање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "скок у вис",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "скок у даљ",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "троскок",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "скок с мотком",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "бацање кугле",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "бацање диска",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "бацање кладива",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "бацање копља",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "маратон",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "20км брзо ходање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "50км брзо ходање",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("61320281213da3ce88614eff"),
+    "sport" : "бициклизам",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "disciplina" : "друмска трка 225км",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("61320296213da3ce88614f02"),
+    "sport" : "пливање",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("613202cb213da3ce88614f0a"),
+    "sport" : "стрељаштво",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "25м малокалиб. пиштољ",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "10м ваздушни пиштољ",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("61320338213da3ce88614f1a"),
+    "sport" : "тенис",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "1",
+            "max_igraca" : "1"
+        }, 
+        {
+            "naziv" : "дубл",
+            "vrsta" : "индивидуални",
+            "min_igraca" : "2",
+            "max_igraca" : "2"
+        }
+    ]
+}

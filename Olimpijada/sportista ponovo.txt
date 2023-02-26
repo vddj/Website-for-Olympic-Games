@@ -1,0 +1,697 @@
+
+{
+    "_id" : ObjectId("6137c112213da3ce8861cdfd"),
+    "ime" : "Амат Мбаје",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c120213da3ce8861ce03"),
+    "ime" : "Аксел Тупан",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137c13d213da3ce8861ce16"),
+    "ime" : "Матијас Лесор",
+    "zemlja" : "Француска",
+    "sport" : "кошарка",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c2c8213da3ce8861ce8f"),
+    "ime" : "Мајкл Фелпс",
+    "zemlja" : "Сједињене Америчке Државе",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("6137c344213da3ce8861cebe"),
+    "ime" : "Келеб Дресел",
+    "zemlja" : "Сједињене Америчке Државе",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137c36a213da3ce8861cecd"),
+    "ime" : "Кејти Ледеки",
+    "zemlja" : "Сједињене Америчке Државе",
+    "sport" : "пливање",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("6137c37b213da3ce8861ced7"),
+    "ime" : "Реган Смит",
+    "zemlja" : "Сједињене Америчке Државе",
+    "sport" : "пливање",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f17215c7fb8ab0c46f70f"),
+    "ime" : "Данил Медведев",
+    "zemlja" : "Руска Федерација",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f17735c7fb8ab0c46f72e"),
+    "ime" : "Стефанос Циципас",
+    "zemlja" : "Грчка",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f17925c7fb8ab0c46f731"),
+    "ime" : "Александар Зверев",
+    "zemlja" : "Немачка",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f17b75c7fb8ab0c46f73a"),
+    "ime" : "Андреј Рубљев",
+    "zemlja" : "Руска Федерација",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f18715c7fb8ab0c46f77b"),
+    "ime" : "Рафаел Надал",
+    "zemlja" : "Шпанија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f188a5c7fb8ab0c46f77e"),
+    "ime" : "Доминик Тим",
+    "zemlja" : "Аустрија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f18aa5c7fb8ab0c46f78a"),
+    "ime" : "Роџер Федерер",
+    "zemlja" : "Швајцарска",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f18d25c7fb8ab0c46f78d"),
+    "ime" : "Денис Шаповалов",
+    "zemlja" : "Канада",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f190b5c7fb8ab0c46f796"),
+    "ime" : "Хуберт Хурчак",
+    "zemlja" : "Пољска",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f193d5c7fb8ab0c46f79d"),
+    "ime" : "Џон Изнер",
+    "zemlja" : "Сједињене Америчке Државе",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f19f05c7fb8ab0c46f7b2"),
+    "ime" : "Алсан Карацев",
+    "zemlja" : "Руска Федерација",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f1a055c7fb8ab0c46f7b7"),
+    "ime" : "Лоренцо Сонего",
+    "zemlja" : "Италија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f1a265c7fb8ab0c46f7bc"),
+    "ime" : "Уго Умбер",
+    "zemlja" : "Француска",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f1a645c7fb8ab0c46f7cc"),
+    "ime" : "Камерон Нори",
+    "zemlja" : "Уједињено Краљевство",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f281a5c7fb8ab0c46f7dd"),
+    "ime" : "Григор Димитров",
+    "zemlja" : "Бугарска",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f28355c7fb8ab0c46f7ea"),
+    "ime" : "Душан Лајовић",
+    "zemlja" : "Србија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f28495c7fb8ab0c46f7ed"),
+    "ime" : "Филип Крајиновић",
+    "zemlja" : "Србија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f285e5c7fb8ab0c46f7f6"),
+    "ime" : "Марин Ћилић",
+    "zemlja" : "Хрватска",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f28765c7fb8ab0c46f7f9"),
+    "ime" : "Стан Вавринка",
+    "zemlja" : "Швајцарска",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f288e5c7fb8ab0c46f7fc"),
+    "ime" : "Кеи Нишикори",
+    "zemlja" : "Јапан",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+
+{
+    "_id" : ObjectId("614f28a75c7fb8ab0c46f805"),
+    "ime" : "Миомир Кецмановић",
+    "zemlja" : "Србија",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f28fb5c7fb8ab0c46f80e"),
+    "ime" : "Јири Весели",
+    "zemlja" : "Чешка",
+    "sport" : "тенис",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "сингл",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f92445c7fb8ab0c471cdb"),
+    "ime" : "Адам Пити",
+    "zemlja" : "Уједињено Краљевство",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f925c5c7fb8ab0c471ce5"),
+    "ime" : "Сето Даија",
+    "zemlja" : "Јапан",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f92715c7fb8ab0c471cee"),
+    "ime" : "Кристоф Милак",
+    "zemlja" : "Мађарска",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f92975c7fb8ab0c471cfb"),
+    "ime" : "Данкен Скот",
+    "zemlja" : "Уједињено Краљевство",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f92b85c7fb8ab0c471d06"),
+    "ime" : "Грегорио Палтриниери",
+    "zemlja" : "Италија",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f931a5c7fb8ab0c471d2b"),
+    "ime" : "Кајл Чалмерс",
+    "zemlja" : "Аустралија",
+    "sport" : "пливање",
+    "pol" : "m",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "100м лептир",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "200м слободно",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f945d5c7fb8ab0c471d8a"),
+    "ime" : "Јасна Шекарић",
+    "zemlja" : "Србија",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f947d5c7fb8ab0c471d98"),
+    "ime" : "Тао Луна",
+    "zemlja" : "Кина",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f94a65c7fb8ab0c471da3"),
+    "ime" : "Олга Кузњецова",
+    "zemlja" : "Руска Федерација",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f94cc5c7fb8ab0c471db2"),
+    "ime" : "Ана Коракаки",
+    "zemlja" : "Грчка",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f94ef5c7fb8ab0c471dbe"),
+    "ime" : "Антоанета Костадинова",
+    "zemlja" : "Бугарска",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f951f5c7fb8ab0c471dd2"),
+    "ime" : "Катерина Енмонс",
+    "zemlja" : "Чешка",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}
+
+{
+    "_id" : ObjectId("614f95315c7fb8ab0c471ddd"),
+    "ime" : "Ду Ли",
+    "zemlja" : "Кина",
+    "sport" : "стрељаштво",
+    "pol" : "z",
+    "medalja" : "ne",
+    "discipline" : [ 
+        {
+            "naziv" : "50м тростав",
+            "prijavljen" : "ne"
+        }, 
+        {
+            "naziv" : "10м ваздушна пушка",
+            "prijavljen" : "ne"
+        }
+    ]
+}

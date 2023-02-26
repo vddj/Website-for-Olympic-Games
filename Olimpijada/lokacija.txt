@@ -1,0 +1,89 @@
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de347e"),
+    "name" : "Olympic Stadium",
+    "zauzeto" : [ 
+        "15:251јануар", 
+        "08:192фебруар"
+    ]
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3481"),
+    "name" : "Tokyo Metropolitan Gymnasium",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3484"),
+    "name" : "Yoyogi National Stadium",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3487"),
+    "name" : "Nippon Budokan",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de348a"),
+    "name" : "Tokyo International Forum",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de348d"),
+    "name" : "Kokugikan Arena",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3490"),
+    "name" : "Equestrian Park",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3493"),
+    "name" : "Musashino Forest Sport Plaza",
+    "zauzeto" : [ 
+        "15:332фебруар"
+    ]
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3496"),
+    "name" : "Tokyo Stadium",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de3499"),
+    "name" : "Musashinonomori Park",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de349c"),
+    "name" : "Ariake Arena",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de349f"),
+    "name" : "Ariake Gymnastics Centre",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de34a2"),
+    "name" : "Ariake Urban Sports Park",
+    "zauzeto" : []
+}
+
+{
+    "_id" : ObjectId("613f950c46dd1c65b5de34a5"),
+    "name" : "Ariake Tennis Park",
+    "zauzeto" : []
+}

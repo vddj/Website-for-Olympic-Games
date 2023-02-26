@@ -1,0 +1,213 @@
+
+{
+    "_id" : ObjectId("614fa55dd017c412e478ce85"),
+    "id" : 2,
+    "sport" : "атлетика",
+    "disciplina" : "скок у даљ",
+    "pol" : "m",
+    "ime" : "Роан Браунинг",
+    "mm" : 1,
+    "ss" : 0,
+    "tt" : 0,
+    "metar1" : 4,
+    "centi1" : 4,
+    "metar2" : 0,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("614fa55dd017c412e478ce86"),
+    "id" : 2,
+    "sport" : "атлетика",
+    "disciplina" : "скок у даљ",
+    "pol" : "m",
+    "ime" : "Стивен Соломон",
+    "mm" : 1,
+    "ss" : 0,
+    "tt" : 0,
+    "metar1" : 2,
+    "centi1" : 3,
+    "metar2" : 0,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("614fa55dd017c412e478ce87"),
+    "id" : 2,
+    "sport" : "атлетика",
+    "disciplina" : "скок у даљ",
+    "pol" : "m",
+    "ime" : "Јошихиде Кирју",
+    "mm" : 1,
+    "ss" : 0,
+    "tt" : 0,
+    "metar1" : 1,
+    "centi1" : 7,
+    "metar2" : 0,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614fa55dd017c412e478ce88"),
+    "id" : 2,
+    "sport" : "атлетика",
+    "disciplina" : "скок у даљ",
+    "pol" : "m",
+    "ime" : "Питер Бол",
+    "mm" : 1,
+    "ss" : 0,
+    "tt" : 0,
+    "metar1" : 1,
+    "centi1" : 3,
+    "metar2" : 0,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("614fa55dd017c412e478ce89"),
+    "id" : 2,
+    "sport" : "атлетика",
+    "disciplina" : "скок у даљ",
+    "pol" : "m",
+    "ime" : "Метју Дени",
+    "mm" : 1,
+    "ss" : 0,
+    "tt" : 0,
+    "metar1" : 5,
+    "centi1" : 0,
+    "metar2" : 0,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("61505ba2e44840220cbbf908"),
+    "id" : 3,
+    "sport" : "стрељаштво",
+    "disciplina" : "50м тростав",
+    "pol" : "z",
+    "ime" : "Јасна Шекарић",
+    "mm" : 1,
+    "ss" : 1,
+    "tt" : 0,
+    "metar1" : 2,
+    "centi1" : 0,
+    "metar2" : 1,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("61505ba2e44840220cbbf909"),
+    "id" : 3,
+    "sport" : "стрељаштво",
+    "disciplina" : "50м тростав",
+    "pol" : "z",
+    "ime" : "Тао Луна",
+    "mm" : 1,
+    "ss" : 1,
+    "tt" : 0,
+    "metar1" : 2,
+    "centi1" : 0,
+    "metar2" : 2,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("61505ba2e44840220cbbf90a"),
+    "id" : 3,
+    "sport" : "стрељаштво",
+    "disciplina" : "50м тростав",
+    "pol" : "z",
+    "ime" : "Олга Кузњецова",
+    "mm" : 1,
+    "ss" : 1,
+    "tt" : 0,
+    "metar1" : 2,
+    "centi1" : 0,
+    "metar2" : 3,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("61505ba2e44840220cbbf90b"),
+    "id" : 3,
+    "sport" : "стрељаштво",
+    "disciplina" : "50м тростав",
+    "pol" : "z",
+    "ime" : "Ана Коракаки",
+    "mm" : 1,
+    "ss" : 1,
+    "tt" : 0,
+    "metar1" : 2,
+    "centi1" : 0,
+    "metar2" : 4,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("61505ba2e44840220cbbf90c"),
+    "id" : 3,
+    "sport" : "стрељаштво",
+    "disciplina" : "50м тростав",
+    "pol" : "z",
+    "ime" : "Антоанета Костадинова",
+    "mm" : 1,
+    "ss" : 1,
+    "tt" : 0,
+    "metar1" : 2,
+    "centi1" : 0,
+    "metar2" : 5,
+    "centi2" : 0,
+    "metar3" : 0,
+    "centi3" : 0,
+    "cc" : 0,
+    "krug" : 0,
+    "__v" : 0
+}

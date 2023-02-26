@@ -1,0 +1,104 @@
+
+{
+    "_id" : ObjectId("6133fce6213da3ce88616ec9"),
+    "godina" : "2012",
+    "mesto" : "Лондон",
+    "disciplina" : "100 м",
+    "takmicar" : "Јусејн Болт",
+    "nacional" : "Јамајка",
+    "rekord" : "9,63"
+}
+
+
+{
+    "_id" : ObjectId("6133fcf3213da3ce88616ed1"),
+    "godina" : "2008",
+    "mesto" : "Пекинг",
+    "disciplina" : "200 м",
+    "takmicar" : "Јусејн Болт",
+    "nacional" : "Јамајка",
+    "rekord" : "19,30"
+}
+
+
+{
+    "_id" : ObjectId("6133fd00213da3ce88616ed8"),
+    "godina" : "2016",
+    "mesto" : "Рио де Жанеиро",
+    "disciplina" : "400 м",
+    "takmicar" : "Вејд ван Никерк",
+    "nacional" : "Јужна Африка",
+    "rekord" : "43,03"
+}
+
+
+{
+    "_id" : ObjectId("6133fd16213da3ce88616ee0"),
+    "godina" : "2012",
+    "mesto" : "Лондон",
+    "disciplina" : "800 м",
+    "takmicar" : "Дејвид Рудиша",
+    "nacional" : "Кенија",
+    "rekord" : "1:40,91"
+}
+
+{
+    "_id" : ObjectId("6138f706213da3ce8861e458"),
+    "godina" : "1996",
+    "mesto" : "Сиднеј",
+    "disciplina" : "1500 м",
+    "takmicar" : "Ноа Нгени",
+    "nacional" : "Кенија",
+    "rekord" : "3:32,07"
+}
+
+{
+    "_id" : ObjectId("6138f747213da3ce8861e463"),
+    "godina" : "2008",
+    "mesto" : "Пекинг",
+    "disciplina" : "5000 м",
+    "takmicar" : "Кенениса Бекеле",
+    "nacional" : "Етиопија",
+    "rekord" : "12:57,82"
+}
+
+
+{
+    "_id" : ObjectId("6138f77f213da3ce8861e46e"),
+    "godina" : "2008",
+    "mesto" : "Пекинг",
+    "disciplina" : "10000 м",
+    "takmicar" : "КЕнениса Бекеле",
+    "nacional" : "Етиопија",
+    "rekord" : "27:01,17"
+}
+
+{
+    "_id" : ObjectId("6138f7c2213da3ce8861e481"),
+    "godina" : "2008",
+    "mesto" : "Пекинг",
+    "disciplina" : "маратон",
+    "takmicar" : "Самјуел Камау Вањиру",
+    "nacional" : "Кенија",
+    "rekord" : "2:06,32"
+}
+
+{
+    "_id" : ObjectId("6138f810213da3ce8861e490"),
+    "godina" : "1988",
+    "mesto" : "Сеул",
+    "disciplina" : "3000 м препреке",
+    "takmicar" : "Џулијус Карјуки",
+    "nacional" : "Кенија",
+    "rekord" : "8:05,51"
+}
+
+{
+    "_id" : ObjectId("6138f848213da3ce8861e49b"),
+    "godina" : "2004",
+    "mesto" : "Атина",
+    "disciplina" : "110 м препоне",
+    "takmicar" : "Љу Сјанг",
+    "nacional" : "Кина",
+    "rekord" : "12,91"
+}
