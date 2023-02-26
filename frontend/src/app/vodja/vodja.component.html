@@ -1,0 +1,150 @@
+<div class='container-fluid'>
+    <div class="card m-3">
+        <div class="card-body">
+            Налог: {{korisnik.username}} | Име и презиме: {{korisnik.ime}} {{korisnik.prezime}} | националност: {{korisnik.nacionalnost}}
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-6'>
+            <div class="card m-3">
+                <div class="card-body">
+                    <h4>Унос такмичара</h4>
+                    <form class='forma'>
+                        <table>
+                            <tr>
+                                <td>Име и презиме:</td>
+                                <td><input class="form-control" type='text' name='ime1' [(ngModel)]='ime1'></td>
+                            </tr>
+                            <tr>
+                                <td>Пол:</td>
+                                <td>
+                                    <input type='radio' value='m' name='pol1' [(ngModel)]='pol1'> M
+                                    <input type='radio' value='z' name='pol1' [(ngModel)]='pol1'> Ж
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Спорт:</td>
+                                <td>
+                                    <select class="form-control" name='sport1' [(ngModel)]='sport1'>
+                                        <option class='radiodugme' value=''>Сви спортови</option>
+                                        <option class='radiodugme' *ngFor='let sp of sportovi' [ngValue]='sp'>{{sp.sport}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Дисциплина:</td>
+                                <td>
+                                    <select class="form-control" name='disciplina1' [(ngModel)]='disciplina1'>
+                                        <option value=''>Све дисциплине</option>
+                                        <option *ngFor='let sp of sport1.discipline' [ngValue]='sp.naziv'>{{sp.naziv}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr><button (click)='unesiTakmicara()'>унеси новог такмичара</button></tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <div class="card m-3">
+                <div class="card-body">
+                    <h4>Приказ спортиста</h4>
+                    <div class='row'>
+                        <div class='col-sm-6'>
+                            <table class="fl-table">
+                                <tr>
+                                    <th>спорт</th>
+                                    <th>дисциплине</th>
+                                </tr>
+                                <tr *ngFor='let s of sportovi'>
+                                    <td>
+                                        <div *ngIf='s.broj != 0'>
+                                            <button class='dugme' (click)='sportPretraga(s)'>{{s.sport}} - [{{s.broj}}]</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div *ngIf='sport == s'>
+                                            <select class="form-control" name='disciplina' [(ngModel)]='disciplina' (change)="dugmezapretragu($event)">
+                                                <option value=''>Све дисциплине</option>
+                                                <option *ngFor='let sp of s.discipline' [ngValue]='sp.naziv'>{{sp.naziv}}</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class='col-sm-6'>
+                            <div class="container">
+                                <label for="website">Спортисти:</label>
+                                <div *ngFor="let web of sportisti">
+                                    <label>{{web.ime}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <div class="card m-3">
+                <div class="card-body">
+                    <h4>Пријава за групне спортове</h4>
+                    <div class='row'>
+                        <div class='col-sm-6'>
+                            <table>
+                                <tr>
+                                    <td>Спорт:</td>
+                                    <td>
+                                        <select class="form-control" name='sport2' [(ngModel)]='sport2'>
+                                            <option class='radiodugme' value=''>Сви спортови</option>
+                                            <option class='radiodugme' *ngFor='let sp of sportovi' [ngValue]='sp'>{{sp.sport}}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Дисциплина:</td>
+                                    <td>
+                                        <select class="form-control" name='disciplina2' [(ngModel)]='disciplina2'>
+                                                    <option value=''>Све дисциплине</option>
+                                                    <option *ngFor='let sp of sport2.discipline' [ngValue]='sp.naziv'>{{sp.naziv}}</option>
+                                                </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Пол:</td>
+                                    <td>
+                                        <input type="radio" name="m" value='m' [(ngModel)]='pol2'> М
+                                        <input type="radio" name="z" value='z' [(ngModel)]="pol2"> Ж
+                                    </td>
+                                </tr>
+                                <tr><button (click)='dugmezapretragu2()'>Одабери групни спорт</button></tr>
+                            </table>
+                        </div>
+                        <div class='col-sm-6'>
+                            <div class="container">
+                                <form [formGroup]="form" (ngSubmit)="submit()">
+                                    <div class="form-group">
+                                        <label for="website">Спортисти:</label>
+                                        <div *ngFor="let web of sportisti2">
+                                            <label>
+                                            <input type="checkbox" [value]="web.ime" (change)="prijavi($event)" />{{web.ime}}</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">пријави екипу</button>
+                                </form>
+                            </div>
+                            <div *ngFor="let web of izabrani">
+                                <br/> {{web}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

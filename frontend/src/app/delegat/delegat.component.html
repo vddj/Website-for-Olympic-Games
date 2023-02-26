@@ -1,0 +1,700 @@
+<div class="card m-3">
+    <div class="card-body">
+        <h4>Унос распореда такмичења и резултата</h4>
+        <table class='forma'>
+            <tr>
+                <td>такмичења:</td>
+                <td>
+                    <select name='odabranoTakm' class="form-control" [(ngModel)]='odabranoTakm' (change)='uradi($event)'>
+                        <option *ngFor='let t of takmicenja' [ngValue]='t'>{{t.sport}} {{t.disciplina}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="card m-3">
+    <div class="card-body">
+        {{odabranoTakm.pocetakDan}} {{odabranoTakm.pocetakMesec}}-{{odabranoTakm.krajDan}} {{odabranoTakm.krajMesec}}
+        <h4>формат такмичења: {{formati[odabranoTakm.format]}}</h4>
+
+        <div *ngIf='odabranoTakm.format != 1 && odabranoTakm.format != 0  && odabranoTakm.format != 9'>
+            Унеси датум, време и локацију:
+            <form>
+                <table>
+                    <tr>
+                        <th>Датум:</th>
+                        <th>Време:</th>
+                        <th>Локација:</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select class='in2' name='odabranoTakm.vremeDan' [(ngModel)]='odabranoTakm.vremeDan'>
+                                <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                            </select>
+                            <select class='in3' name='odabranoTakm.vremeMesec' [(ngModel)]='odabranoTakm.vremeMesec'>
+                                <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                            </select>
+                            <label>'21.</label>
+                        </td>
+                        <td>
+                            <input class='nonInput' type='time' name='odabranoTakm.vreme' [(ngModel)]='odabranoTakm.vreme'>
+                        </td>
+                        <td>
+                            <select class='in' name='odabranoTakm.lokacija' [(ngModel)]='odabranoTakm.lokacija'>
+                                <option [ngValue]=''>Одабери локацијy</option>
+                                <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button (click)='zauzmi()'>заузми локацију</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <table>
+                <tr *ngFor='let a of odabraniRez'>
+                    <td>{{a.ime}}</td>
+                    <td>
+                        <!--8 такмичара (СС,ТТ)-->
+                        <div *ngIf='odabranoTakm.format === 2'>
+                            (<input type='number' name='a.ss' min="0" max="59" [(ngModel)]='a.ss'>,<input type='number' name='a.tt' min="0" max="59" [(ngModel)]='a.tt'>)
+                        </div>
+                        <!--8 такмичара (ММ:СС,ТТ)-->
+                        <div *ngIf='odabranoTakm.format === 3'>
+                            (<input type='number' name='a.mm' min="0" max="59" [(ngModel)]='a.mm'>:<input type='number' min="0" max="59" name='a.ss' [(ngModel)]='a.ss'>, <input type='text' name='a.tt' [(ngModel)]='a.tt'>)
+                        </div>
+                        <!--до 8 такмичара (М,ЦМ)-->
+                        <!--до 8 такмичара (ММ,ЦМ)-->
+                        <div *ngIf='odabranoTakm.format === 4 || odabranoTakm.format === 5'>
+                            <div *ngIf='a.mm == 0; then odobreno1 else zabranjeno1'></div>
+                            <ng-template #odobreno1>
+                                (<input type='number' min="0" name='a.metar1' [(ngModel)]='a.metar1'>,<input type='number' min="0" max="59" name='a.centi1' [(ngModel)]='a.centi1'>) (
+                            </ng-template>
+                            <ng-template #zabranjeno1>
+                                (<input type='number' min="0" name='a.metar1' [(ngModel)]='a.metar1' disabled>,<input type='number' min="0" max="59" name='a.centi1' [(ngModel)]='a.centi1' disabled>) (
+                            </ng-template>
+
+                            <div *ngIf='a.ss == 0; then odobreno2 else zabranjeno2'></div>
+                            <ng-template #odobreno2>
+                                <input type='number' min="0" name='a.metar2' [(ngModel)]='a.metar2'>,<input type='number' min="0" max="59" name='a.centi2' [(ngModel)]='a.centi2'>) (
+                            </ng-template>
+                            <ng-template #zabranjeno2>
+                                <input type='number' min="0" name='a.metar2' [(ngModel)]='a.metar2' disabled>,<input type='number' min="0" max="59" name='a.centi2' [(ngModel)]='a.centi2' disabled>) (
+                            </ng-template>
+
+                            <div *ngIf='a.tt == 0; then odobreno3 else zabranjeno3'></div>
+                            <ng-template #odobreno3>
+                                <input type='number' min="0" name='a.metar3' [(ngModel)]='a.metar3'>,<input type='number' min="0" max="59" name='a.centi3' [(ngModel)]='a.centi3'>)
+                            </ng-template>
+                            <ng-template #zabranjeno3>
+                                <input type='number' min="0" name='a.metar3' [(ngModel)]='a.metar3' disabled>,<input type='number' min="0" max="59" name='a.centi3' [(ngModel)]='a.centi3' disabled>)
+                            </ng-template>
+
+                        </div>
+                        <!--8 такмичара (ЧЧ:ММ:СС)-->
+                        <div *ngIf='odabranoTakm.format === 6'>
+                            (<input type='number' name='a.cc' min="0" max="59" [(ngModel)]='a.cc'>:<input type='number' min="0" max="59" name='a.mm' [(ngModel)]='a.mm'>:
+                            <input type='number' name='a.ss' min="0" max="59" [(ngModel)]='a.ss'>)
+                        </div>
+                        <!--до 8 такмичара-кругови-->
+                        <div *ngIf='odabranoTakm.format === 8'>
+                            (<input type='number' name='a.metar1' [(ngModel)]='a.metar1' min="0" max="59">) (
+                            <input type='number' name='a.metar2' [(ngModel)]='a.metar2' min="0" max="59">) (
+                            <input type='number' name='a.metar3' [(ngModel)]='a.metar3' min="0" max="59">) (
+                            <input type='number' name='a.centi1' [(ngModel)]='a.centi1' min="0" max="59">) (
+                            <input type='number' name='a.centi2' [(ngModel)]='a.centi2' min="0" max="59">) (
+                            <input type='number' name='a.centi3' [(ngModel)]='a.centi3' min="0" max="59">)
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-secondary" (click)='sacuvaj(a)'>сачувај</button>
+                    </td>
+                </tr>
+                <tr *ngIf='odabranoTakm.format === 4 || odabranoTakm.format === 5'>
+                    <td></td>
+                    <td>
+                        <div *ngIf='odabraniRez[0].mm === 0; then odobreno1 else zabranjeno1'></div>
+                        <ng-template #odobreno1>
+                            <button class="btn btn-secondary dugme" (click)='sacuvaj1(1)'>заврши</button>
+                        </ng-template>
+                        <ng-template #zabranjeno1>
+                            <button class="btn btn-secondary dugme" (click)='sacuvaj1(1)' disabled>заврши</button>
+                        </ng-template>
+                        <div *ngIf='odabraniRez[0].ss === 0; then odobreno2 else zabranjeno2'></div>
+                        <ng-template #odobreno2>
+                            <button class="btn btn-secondary dugme" (click)='sacuvaj1(2)'>заврши</button>
+                        </ng-template>
+                        <ng-template #zabranjeno2>
+                            <button class="btn btn-secondary dugme" (click)='sacuvaj1(2)' disabled>заврши</button>
+                        </ng-template>
+                        <div *ngIf='odabraniRez[0].tt === 0; then odobreno3 else zabranjeno3'></div>
+                        <ng-template #odobreno3>
+                            <button class="btn btn-secondary dugme" (click)='sacuvaj1(3)'>заврши</button>
+                        </ng-template>
+                        <ng-template #zabranjeno3>
+                            <button class="btn btn-secondary dugme" (click)='sacuvaj1(3)' disabled>заврши</button>
+                        </ng-template>
+                    </td>
+                </tr>
+                <tr *ngIf='odabranoTakm.format === 8'>
+                    <td></td>
+                    <td>
+                        <div *ngIf='odabraniRez[0].mm === 0; then odobreno1 else zabranjeno1'></div>
+                        <ng-template #odobreno1>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(1)'>ok</button>
+                        </ng-template>
+                        <ng-template #zabranjeno1>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(1)' disabled>ok</button>
+                        </ng-template>
+                        <div *ngIf='odabraniRez[0].ss === 0; then odobreno2 else zabranjeno2'></div>
+                        <ng-template #odobreno2>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(2)'>ok</button>
+                        </ng-template>
+                        <ng-template #zabranjeno2>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(2)' disabled>ok</button>
+                        </ng-template>
+                        <div *ngIf='odabraniRez[0].tt === 0; then odobreno3 else zabranjeno3'></div>
+                        <ng-template #odobreno3>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(3)'>ok</button>
+                        </ng-template>
+                        <ng-template #zabranjeno3>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(3)' disabled>ok</button>
+                        </ng-template>
+                        <div *ngIf='odabraniRez[0].cc === 0; then odobreno1 else zabranjeno1'></div>
+                        <ng-template #odobreno1>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(4)'>ok</button>
+                        </ng-template>
+                        <ng-template #zabranjeno1>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(4)' disabled>ok</button>
+                        </ng-template>
+                        <div *ngIf='odabraniRez[0].krug === 0; then odobreno2 else zabranjeno2'></div>
+                        <ng-template #odobreno2>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(5)'>ok</button>
+                        </ng-template>
+                        <ng-template #zabranjeno2>
+                            <button class="btn btn-secondary dugme1" (click)='sacuvaj1(5)' disabled>ok</button>
+                        </ng-template>
+                    </td>
+                </tr>
+                <tr *ngIf='odabranoTakm.format === 2 || odabranoTakm.format === 3 || odabranoTakm.format === 4 || odabranoTakm.format === 5 || odabranoTakm.format === 6 || odabranoTakm.format === 8'>
+                    <td colspan="3">
+                        <button class="btn btn-primary mr-1" (click)='zavrsiTakmicenje()'>заврши такмичење</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--4/8/16 учесника-жреб-->
+        <div *ngIf='odabranoTakm.format === 9'>
+            <div *ngIf='rezultatTenis.brTakmicara == 16'>
+                <h5>осмина финала</h5>
+                <table>
+                    <tr *ngFor='let i of brojevi6'>
+                        <td>{{rezultatTenis.ekipe8[i]}}</td>
+                        <td>{{rezultatTenis.ekipe8[i+8]}}</td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_8[i]'>
+                        </td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_8[i+8]'>
+                        </td>
+                    </tr>
+                </table>
+                <button (click)="azurirajTenis('f_8', rezultatTenis.f_8)">sacuvaj</button>
+            </div>
+            <div *ngIf='(rezultatTenis.brTakmicara == 8 || rezultatTenis.brTakmicara == 16) && rezultatTenis.zavrseno8 == 1'>
+                <h5>четвртина финала</h5>
+                <table>
+                    <tr *ngFor='let i of brojevi7'>
+                        <td>{{rezultatTenis.ekipe4[i]}}</td>
+                        <td>{{rezultatTenis.ekipe4[i+4]}}</td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_4[i]'>
+                        </td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_4[i+4]'>
+                        </td>
+                    </tr>
+                </table>
+                <button (click)="azurirajTenis('f_4', rezultatTenis.f_4)">sacuvaj</button>
+            </div>
+            <div *ngIf='(rezultatTenis.brTakmicara == 8 || rezultatTenis.brTakmicara == 16 
+                || rezultatTenis.brTakmicara == 4) && rezultatTenis.zavrseno4 == 1'>
+                <h5>половина финалa</h5>
+                <table>
+                    <tr *ngFor='let i of brojevi8'>
+                        <td>{{rezultatTenis.ekipe2[i]}}</td>
+                        <td>{{rezultatTenis.ekipe2[i+2]}}</td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_2[i]'>
+                        </td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_2[i+2]'>
+                        </td>
+                    </tr>
+                </table>
+                <button (click)="azurirajTenis('f_2', rezultatTenis.f_2)">sacuvaj</button>
+            </div>
+            <div *ngIf='rezultatTenis.zavrseno2 == 1'>
+                <h5>за треће место</h5>
+                <table>
+                    <tr>
+                        <td>{{rezultatTenis.ekipe3[0]}}</td>
+                        <td>{{rezultatTenis.ekipe3[1]}}</td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_3[0]'>
+                        </td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_3[1]'>
+                        </td>
+                    </tr>
+                </table>
+                <button (click)="azurirajTenis('f_3', rezultatTenis.f_3)">sacuvaj</button>
+                <h5>финале</h5>
+                <table>
+                    <tr>
+                        <td>{{rezultatTenis.ekipe1[0]}}</td>
+                        <td>{{rezultatTenis.ekipe1[1]}}</td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_1[0]'>
+                        </td>
+                        <td>
+                            <input type='number' min="0" max="3" [(ngModel)]='rezultatTenis.f_1[1]'>
+                        </td>
+                    </tr>
+                </table>
+                <button (click)="azurirajTenis('f_1', rezultatTenis.f_1)">sacuvaj</button>
+            </div>
+
+            <button class="btn btn-primary mr-1" (click)='zavrsiTakmicenje()'>заврши такмичење</button>
+
+            <h3>унос распореда</h3>
+            <div *ngIf='rezultatTenis.brTakmicara == 16'>
+                <table>
+                    <th>осмина финалa</th>
+                    <tr *ngFor='let n of brojevi6'>
+                        <td>утакмица {{n+1}} осмине финала</td>
+                        <td>
+                            <select class='in2' name='odabranoTakm.danG[n]' [(ngModel)]='odabranoTakm.danG[n]'>
+                                <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                            </select>
+                            <select class='in3' name='odabranoTakm.mesecG[n]' [(ngModel)]='odabranoTakm.mesecG[n]'>
+                                <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                            </select>
+                            <label>'21.</label>
+                        </td>
+                        <td>
+                            <input class='nonInput' type='time' name='odabranoTakm.vremeG[n]' [(ngModel)]='odabranoTakm.vremeG[n]'>
+                        </td>
+                        <td>
+                            <select class='in' name='odabranoTakm.lokacijaG[n]' [(ngModel)]='odabranoTakm.lokacijaG[n]'>
+                                <option [ngValue]=''>Одабери локацијy</option>
+                                <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                            </select>
+                        </td>
+                        <td><button (click)='promeniVremeUtakmica(n)'>сачувај</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div *ngIf='rezultatTenis.brTakmicara == 8 || rezultatTenis.brTakmicara == 16'>
+                <table>
+                    <th>Четврт финале</th>
+                    <tr *ngFor='let n of brojevi7'>
+                        <td>утакмица {{n+1}} четврт финала</td>
+                        <td>
+                            <select class='in2' name='odabranoTakm.danG[n+8]' [(ngModel)]='odabranoTakm.danG[n+8]'>
+                                <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                            </select>
+                            <select class='in3' name='odabranoTakm.mesecG[n+8]' [(ngModel)]='odabranoTakm.mesecG[n+8]'>
+                                <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                            </select>
+                            <label>'21.</label>
+                        </td>
+                        <td>
+                            <input class='nonInput' type='time' name='odabranoTakm.vremeG[n+8]' [(ngModel)]='odabranoTakm.vremeG[n+8]'>
+                        </td>
+                        <td>
+                            <select class='in' name='odabranoTakm.lokacijaG[n+8]' [(ngModel)]='odabranoTakm.lokacijaG[n+8]'>
+                                <option [ngValue]=''>Одабери локацијy</option>
+                                <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                            </select>
+                        </td>
+                        <td><button (click)='promeniVremeUtakmica(n+8)'>сачувај</button></td>
+                    </tr>
+                </table>
+            </div>
+            <table>
+                <th>Полуфинале</th>
+                <tr *ngFor='let n of brojevi8'>
+                    <td>утакмица {{n+1}} полуфинала</td>
+                    <td>
+                        <select class='in2' name='odabranoTakm.danG[n+12]' [(ngModel)]='odabranoTakm.danG[n+12]'>
+                            <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                        </select>
+                        <select class='in3' name='odabranoTakm.mesecG[n+12]' [(ngModel)]='odabranoTakm.mesecG[n+12]'>
+                            <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                        </select>
+                        <label>'21.</label>
+                    </td>
+                    <td>
+                        <input class='nonInput' type='time' name='odabranoTakm.vremeG[n+12]' [(ngModel)]='odabranoTakm.vremeG[n+12]'>
+                    </td>
+                    <td>
+                        <select class='in' name='odabranoTakm.lokacijaG[n+12]' [(ngModel)]='odabranoTakm.lokacijaG[n+12]'>
+                            <option [ngValue]=''>Одабери локацијy</option>
+                            <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                        </select>
+                    </td>
+                    <td><button (click)='promeniVremeUtakmica(n+12)'>сачувај</button></td>
+                </tr>
+                <th>финале</th>
+                <tr>
+                    <td>утакмица финала</td>
+                    <td>
+                        <select class='in2' name='odabranoTakm.danG[13]' [(ngModel)]='odabranoTakm.danG[13]'>
+                            <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                        </select>
+                        <select class='in3' name='odabranoTakm.mesecG[13]' [(ngModel)]='odabranoTakm.mesecG[13]'>
+                            <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                        </select>
+                        <label>'21.</label>
+                    </td>
+                    <td>
+                        <input class='nonInput' type='time' name='odabranoTakm.vremeG[13]' [(ngModel)]='odabranoTakm.vremeG[13]'>
+                    </td>
+                    <td>
+                        <select class='in' name='odabranoTakm.lokacijaG[13]' [(ngModel)]='odabranoTakm.lokacijaG[13]'>
+                            <option [ngValue]=''>Одабери локацијy</option>
+                            <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                        </select>
+                    </td>
+                    <td><button (click)='promeniVremeUtakmica(n+13)'>сачувај</button></td>
+                </tr>
+            </table>
+        </div>
+        <!--2 групе (А, Б)-6 екипа-->
+        <div *ngIf='odabranoTakm.format === 1'>
+            <button class="btn btn-secondary" (click)='rasporedi()'>random</button>
+            <button (click)="promenaStranice(1)">Унос резултата</button>
+            <button (click)="promenaStranice(2)">Унос распореда</button>
+            <div *ngIf='stranica==1'>
+                <h3>Унос резултата</h3>
+                <div class='row'>
+                    <div class='col-sm-8'>
+                        <h5>Групна фаза</h5>
+                        <table>
+                            <tr>
+                                <td colspan="5">Група А</td>
+                                <td colspan="5">Група Б</td>
+                            </tr>
+                            <tr *ngFor='let i of brojevi1'>
+                                <td>{{rezultatGrupni.ekipe[0]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[0][i]' [(ngModel)]='rezultatGrupni.grupaA[0][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[i][0]' [(ngModel)]='rezultatGrupni.grupaA[i][0]'>
+                                </td>
+                                <td>{{rezultatGrupni.ekipe[6]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i+6]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[0][i]' [(ngModel)]='rezultatGrupni.grupaB[0][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[i][0]' [(ngModel)]='rezultatGrupni.grupaB[i][0]'>
+                                </td>
+                            </tr>
+                            <tr *ngFor='let i of brojevi2'>
+                                <td>{{rezultatGrupni.ekipe[1]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[1][i]' [(ngModel)]='rezultatGrupni.grupaA[1][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[i][1]' [(ngModel)]='rezultatGrupni.grupaA[i][1]'>
+                                </td>
+                                <td>{{rezultatGrupni.ekipe[7]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i+6]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[1][i]' [(ngModel)]='rezultatGrupni.grupaB[1][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[i][1]' [(ngModel)]='rezultatGrupni.grupaB[i][1]'>
+                                </td>
+                            </tr>
+                            <tr *ngFor='let i of brojevi3'>
+                                <td>{{rezultatGrupni.ekipe[2]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[2][i]' [(ngModel)]='rezultatGrupni.grupaA[2][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[i][2]' [(ngModel)]='rezultatGrupni.grupaA[i][2]'>
+                                </td>
+                                <td>{{rezultatGrupni.ekipe[8]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i+6]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[2][i]' [(ngModel)]='rezultatGrupni.grupaB[2][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[i][2]' [(ngModel)]='rezultatGrupni.grupaB[i][2]'>
+                                </td>
+                            </tr>
+                            <tr *ngFor='let i of brojevi4'>
+                                <td>{{rezultatGrupni.ekipe[3]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[3][i]' [(ngModel)]='rezultatGrupni.grupaA[3][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[i][3]' [(ngModel)]='rezultatGrupni.grupaA[i][3]'>
+                                </td>
+                                <td>{{rezultatGrupni.ekipe[9]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i+6]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[3][i]' [(ngModel)]='rezultatGrupni.grupaB[3][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[i][3]' [(ngModel)]='rezultatGrupni.grupaB[i][3]'>
+                                </td>
+                            </tr>
+                            <tr *ngFor='let i of brojevi5'>
+                                <td>{{rezultatGrupni.ekipe[4]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[4][i]' [(ngModel)]='rezultatGrupni.grupaA[4][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaA[i][4]' [(ngModel)]='rezultatGrupni.grupaA[i][4]'>
+                                </td>
+                                <td>{{rezultatGrupni.ekipe[10]}}</td>
+                                <td>{{rezultatGrupni.ekipe[i+6]}}</td>
+                                <td>
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[4][i]' [(ngModel)]='rezultatGrupni.grupaB[4][i]'> :
+                                    <input type='number' min="0" name='rezultatGrupni.grupaB[i][4]' [(ngModel)]='rezultatGrupni.grupaB[i][4]'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><button class="btn btn-secondary" (click)="sacuvajGrupne('a')">сачувај групу А</button></td>
+                                <td colspan="4"><button class="btn btn-secondary" (click)="sacuvajGrupne('b')">сачувај групу Б</button></td>
+                            </tr>
+
+                        </table>
+                        <button class="btn btn-secondary" (click)="zavrsi('a')">заврши групну фазу</button>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div *ngIf='rezultatGrupni.zavrsenoA === 1 && rezultatGrupni.zavrsenoB === 1'>
+                            <h5>Четвртина финала</h5>
+                            <table>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliA[0]}}</td>
+                                    <td>{{rezultatGrupni.prosliB[3]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[0]' [(ngModel)]='rezultatGrupni.f_4[0]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[1]' [(ngModel)]='rezultatGrupni.f_4[1]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliB[1]}}</td>
+                                    <td>{{rezultatGrupni.prosliA[2]}}</td>
+                                    <td>
+                                        <input type='tnumber' min="0" name='rezultatGrupni.f_4[2]' [(ngModel)]='rezultatGrupni.f_4[2]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[3]' [(ngModel)]='rezultatGrupni.f_4[3]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliB[0]}}</td>
+                                    <td>{{rezultatGrupni.prosliA[3]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[4]' [(ngModel)]='rezultatGrupni.f_4[4]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[5]' [(ngModel)]='rezultatGrupni.f_4[5]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliA[1]}}</td>
+                                    <td>{{rezultatGrupni.prosliB[2]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[6]' [(ngModel)]='rezultatGrupni.f_4[6]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f_4[7]' [(ngModel)]='rezultatGrupni.f_4[7]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><button class="btn btn-secondary" (click)="sacuvajGrupne('c')">сачувај</button></td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-secondary" (click)="zavrsi('c')">заврши четвртину финала</button>
+                        </div>
+                        <div *ngIf='rezultatGrupni.zavrseno4 === 1'>
+                            <h5>Полуфинале</h5>
+                            <table>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliCetvrt[0]}}</td>
+                                    <td>{{rezultatGrupni.prosliCetvrt[1]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.f_2[0]' [(ngModel)]='rezultatGrupni.f_2[0]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f_2[1]' [(ngModel)]='rezultatGrupni.f_2[1]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliCetvrt[2]}}</td>
+                                    <td>{{rezultatGrupni.prosliCetvrt[3]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.f_2[2]' [(ngModel)]='rezultatGrupni.f_2[2]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f_2[3]' [(ngModel)]='rezultatGrupni.f_2[3]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><button class="btn btn-secondary" (click)="sacuvajGrupne('d')">сачувај</button></td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-secondary" (click)="zavrsi('d')">заврши полуфинале</button>
+                        </div>
+                        <div *ngIf='rezultatGrupni.zavrseno2 === 1'>
+                            <h5>Меч за треће место</h5>
+                            <table>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliPola[2]}}</td>
+                                    <td>{{rezultatGrupni.prosliPola[3]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.mecZaTrece[0]' [(ngModel)]='rezultatGrupni.mecZaTrece[0]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.mecZaTrece[1]' [(ngModel)]='rezultatGrupni.mecZaTrece[1]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><button class="btn btn-secondary" (click)="sacuvajGrupne('t')">сачувај</button></td>
+                                </tr>
+                            </table>
+                            <h5>Финале</h5>
+                            <table>
+                                <tr>
+                                    <td>{{rezultatGrupni.prosliPola[0]}}</td>
+                                    <td>{{rezultatGrupni.prosliPola[1]}}</td>
+                                    <td>
+                                        <input type='number' min="0" name='rezultatGrupni.f[0]' [(ngModel)]='rezultatGrupni.f[0]'> :
+                                        <input type='number' min="0" name='rezultatGrupni.f[1]' [(ngModel)]='rezultatGrupni.f[1]'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><button class="btn btn-secondary" (click)="sacuvajGrupne('j')">сачувај</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <button class="btn btn-primary mr-1" (click)='zavrsiTakmicenje()'>заврши такмичење</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf='stranica==2'>
+                <h3>Унос распореда</h3>
+                <div class='row'>
+                    <div class='col-sm-12'>
+                        <table>
+                            <th>Група А</th>
+                            <tr *ngFor='let n of niz'>
+                                <td>утакмица {{n+1}} грyпе А</td>
+                                <td>
+                                    <select class='in2' name='odabranoTakm.danG[n]' [(ngModel)]='odabranoTakm.danG[n]'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='odabranoTakm.mesecG[n]' [(ngModel)]='odabranoTakm.mesecG[n]'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                                <td>
+                                    <input class='nonInput' type='time' name='odabranoTakm.vremeG[n]' [(ngModel)]='odabranoTakm.vremeG[n]'>
+                                </td>
+                                <td>
+                                    <select class='in' name='odabranoTakm.lokacijaG[n]' [(ngModel)]='odabranoTakm.lokacijaG[n]'>
+                                        <option [ngValue]=''>Одабери локацијy</option>
+                                        <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                                    </select>
+                                </td>
+                                <td><button (click)='promeniVremeUtakmica(n)'>sacuvaj</button></td>
+                            </tr>
+                            <th>Група Б</th>
+                            <tr *ngFor='let n of niz'>
+                                <td>утакмица {{n+1}} групе Б</td>
+                                <td>
+                                    <select class='in2' name='odabranoTakm.danG[n+15]' [(ngModel)]='odabranoTakm.danG[n+15]'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='odabranoTakm.mesecG[n+15]' [(ngModel)]='odabranoTakm.mesecG[n+15]'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                                <td>
+                                    <input class='nonInput' type='time' name='odabranoTakm.vremeG[n+15]' [(ngModel)]='odabranoTakm.vremeG[n+15]'>
+                                </td>
+                                <td>
+                                    <select class='in' name='odabranoTakm.lokacijaG[n+15]' [(ngModel)]='odabranoTakm.lokacijaG[n+15]'>
+                                        <option [ngValue]=''>Одабери локацијy</option>
+                                        <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                                    </select>
+                                </td>
+                                <td><button (click)='promeniVremeUtakmica(n+15)'>сачувај</button></td>
+                            </tr>
+                            <th>Четврт финале</th>
+                            <tr *ngFor='let n of niz1'>
+                                <td>утакмица {{n+1}} четврт финала</td>
+                                <td>
+                                    <select class='in2' name='odabranoTakm.danG[n+30]' [(ngModel)]='odabranoTakm.danG[n+30]'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='odabranoTakm.mesecG[n+30]' [(ngModel)]='odabranoTakm.mesecG[n+30]'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                                <td>
+                                    <input class='nonInput' type='time' name='odabranoTakm.vremeG[n+30]' [(ngModel)]='odabranoTakm.vremeG[n+30]'>
+                                </td>
+                                <td>
+                                    <select class='in' name='odabranoTakm.lokacijaG[n+30]' [(ngModel)]='odabranoTakm.lokacijaG[n+30]'>
+                                        <option [ngValue]=''>Одабери локацијy</option>
+                                        <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                                    </select>
+                                </td>
+                                <td><button (click)='promeniVremeUtakmica(n+30)'>сачувај</button></td>
+                            </tr>
+                            <th>Полуфинале</th>
+                            <tr *ngFor='let n of niz2'>
+                                <td>утакмица {{n+1}} полуфинала</td>
+                                <td>
+                                    <select class='in2' name='odabranoTakm.danG[n+34]' [(ngModel)]='odabranoTakm.danG[n+34]'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='odabranoTakm.mesecG[n+34]' [(ngModel)]='odabranoTakm.mesecG[n+34]'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                                <td>
+                                    <input class='nonInput' type='time' name='odabranoTakm.vremeG[n+34]' [(ngModel)]='odabranoTakm.vremeG[n+34]'>
+                                </td>
+                                <td>
+                                    <select class='in' name='odabranoTakm.lokacijaG[n+34]' [(ngModel)]='odabranoTakm.lokacijaG[n+34]'>
+                                        <option [ngValue]=''>Одабери локацијy</option>
+                                        <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                                    </select>
+                                </td>
+                                <td><button (click)='promeniVremeUtakmica(n+34)'>сачувај</button></td>
+                            </tr>
+                            <th>финале</th>
+                            <tr>
+                                <td>утакмица финала</td>
+                                <td>
+                                    <select class='in2' name='odabranoTakm.danG[36]' [(ngModel)]='odabranoTakm.danG[36]'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='odabranoTakm.mesecG[36]' [(ngModel)]='odabranoTakm.mesecG[36]'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                                <td>
+                                    <input class='nonInput' type='time' name='odabranoTakm.vremeG[36]' [(ngModel)]='odabranoTakm.vremeG[36]'>
+                                </td>
+                                <td>
+                                    <select class='in' name='odabranoTakm.lokacijaG[36]' [(ngModel)]='odabranoTakm.lokacijaG[36]'>
+                                        <option [ngValue]=''>Одабери локацијy</option>
+                                        <option *ngFor='let l of odabranoTakm.lokacije' [ngValue]='l'>{{l}}</option>
+                                    </select>
+                                </td>
+                                <td><button (click)='promeniVremeUtakmica(n+36)'>сачувај</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

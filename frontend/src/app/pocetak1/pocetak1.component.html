@@ -1,0 +1,52 @@
+<!--breadcrumb #parent>
+    <ol class='breadcrumb'>
+        <ng-template ngFor let-route [ngForOf]='parent.breadcrumbs'>
+            <li *ngIf="!route.terminal" class='breadcrumb-item'>
+                <a href='' [routerLink]='[route.url]'>{{route.displayName}}</a>
+            </li>
+            <li *ngIf='route.terminal' class='breadcrumb-item active'>{{route.displayName}}</li>
+        </ng-template>
+    </ol>
+</breadcrumb-->
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <th></th>
+            <th>Држава</th>
+            <th>бр. такмичара</th>
+        </tr>
+        <tr *ngFor="let n of zemlje | paginate: { id: 'foo', itemsPerPage: 10, currentPage: page, totalItems: total}">
+            <td><img height="20" width='46' src='assets/zastave/{{n.id}}.png'></td>
+            <td>{{n.ime}}</td>
+            <td>{{n.br_sportista}}</td>
+        </tr>
+    </table>
+    <div>
+        <pagination-controls id='foo' (pageChange)="page = $event" previousLabel="претходна" nextLabel="следећа"></pagination-controls>
+    </div>
+</div>
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <th>Ранг</th>
+            <th>Име земље</th>
+            <th>бр. златних медаља</th>
+            <th>бр. сребрних медаља</th>
+            <th>бр. бронзаних медаља</th>
+            <th>укупан бр. медаља</th>
+        </tr>
+        <tr *ngFor="let n of zemlje | paginate: { id: 'foo2', itemsPerPage: 10, currentPage: page2, totalItems: total2}">
+            <td>{{n.rang}}</td>
+            <td>{{n.ime}}</td>
+            <td>{{n.br_zlato}}</td>
+            <td>{{n.br_srebro}}</td>
+            <td>{{n.br_bronza}}</td>
+            <td>{{n.br_ukupno}}</td>
+        </tr>
+    </table>
+    <div>
+        <pagination-controls id='foo2' (pageChange)="page2 = $event" previousLabel="претходна" nextLabel="следећа"></pagination-controls>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.form-control {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.radiodugme {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.nonInput {
+    background-color: #e0e0e0;
+    color: rgb(0, 0, 0);
+    width: 103px;
+    border: 0cm;
+}
+
+input {
+    background-color: #e0e0e0;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    border: 0cm;
+}
+
+.forma {
+    background-color: #e4e4e4;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.in2 {
+    width: 28%;
+    padding: 6px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.in3 {
+    width: 53%;
+    padding: 6px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.dugme {
+    width: 95px;
+}
+
+.dugme1 {
+    width: 57px;
+}

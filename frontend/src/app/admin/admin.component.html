@@ -1,0 +1,208 @@
+<div class='container-fluid'>
+    <h3>профил за организатора такмичења</h3>
+    <div class='row'>
+        <div class='col-sm-6'>
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div class='forma'>
+                        <table>
+                            <th>Унос спортова</th>
+                            <tr>
+                                <td>Спорт:</td>
+                                <td><input class='in' type='text' name='sport' [(ngModel)]='sport'></td>
+                            </tr>
+                            <tr>
+                                <td>Дисциплина:</td>
+                                <td><input class='in' type='text' name='disciplina' [(ngModel)]='disciplina'></td>
+                            </tr>
+                            <tr>
+                                <td>Врста:</td>
+                                <td>
+                                    <input type="radio" name="vrsta" value='групни' [(ngModel)]="vrsta"> екипни
+                                    <input type="radio" name="vrsta" value='индивидуални' [(ngModel)]="vrsta"> индивидуални
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Минимално играча:</td>
+                                <td><input class='in' type='number' name='min_igraca' [(ngModel)]='min_igraca'></td>
+                            </tr>
+                            <tr>
+                                <td>Максимално играча:</td>
+                                <td><input class='in' type='number' name='max_igraca' [(ngModel)]='max_igraca'></td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'><button class="btn btn-primary" (click)='dodajSport()'>Додај спорт</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div class='forma'>
+                        <table>
+                            <th>Унос такмичења</th>
+                            <tr>
+                                <td>Спорт:</td>
+                                <td>
+                                    <select class='in' name='Tsport' [(ngModel)]='Tsport'>
+                                        <option value='TpomocniSport'>Сви спортови</option>
+                                        <option *ngFor='let sp of sportovi' [ngValue]='sp'>{{sp.sport}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Спортска дисциплина:</td>
+                                <td>
+                                    <select class='in' name='Tdisciplina' [(ngModel)]='Tdisciplina'>
+                                        <option [ngValue]=''>Све дисциплине</option>
+                                        <option *ngFor='let sp of Tsport.discipline' [ngValue]='sp.naziv'>{{sp.naziv}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Пол:</td>
+                                <td>
+                                    <input type="radio" name="delegat" value='m' [(ngModel)]='Tpol'> М
+                                    <input type="radio" name="vodja" value='z' [(ngModel)]="Tpol"> Ж
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Датум почетка:</td>
+                                <td>
+                                    <select class='in2' name='pocetakDan' [(ngModel)]='pocetakDan'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='pocetakMesec' [(ngModel)]='pocetakMesec'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Датум краја:</td>
+                                <td>
+                                    <select class='in2' name='krajDan' [(ngModel)]='krajDan'>
+                                        <option *ngFor='let d of dani' [ngValue]='d'>{{d}}</option>
+                                    </select>
+                                    <select class='in3' name='krajMesec' [(ngModel)]='krajMesec'>
+                                        <option *ngFor='let m of meseci' [ngValue]='m'>{{m}}</option>
+                                    </select>
+                                    <label>'21.</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Формат такмичења:</td>
+                                <td>
+                                    <select class='in' name='format' [(ngModel)]='format'>
+                                        <option value='none' selected disabled hidden>Одабери формат</option>
+                                        <option [ngValue]='1'>2 групе (А, Б)-6 екипа</option>
+                                        <option [ngValue]='2'>8 такмичара (СС,ТТ)</option>
+                                        <option [ngValue]='3'>8 такмичара (ММ:СС,ТТ)</option>
+                                        <option [ngValue]='4'>до 8 такмичара (М,ЦМ)</option>
+                                        <option [ngValue]='5'>до 8 такмичара (ММ,ЦМ)</option>
+                                        <option [ngValue]='6'>8 такмичара (ЧЧ:ММ:СС)</option>
+                                        <!--option [ngValue]='7'>до 8 такмичара (М,ЦМ)</option-->
+                                        <option [ngValue]='8'>до 8 такмичара-кругови</option>
+                                        <option [ngValue]='9'>4/8/16 учесника-жреб</option>
+                                        <option [ngValue]='10'>4/8/16 парова-жреб</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Локације:</td>
+                                <td>
+                                    <select class='in' name='lokacijeOdabrane' [(ngModel)]='lokacijeOdabrane' multiple>
+                                        <option *ngFor='let l of lokacije' [ngValue]='l.name'>{{l.name}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Делегат:</td>
+                                <td>
+                                    <select class='in' name='delegat' [(ngModel)]='delegat'>
+                                        <option [ngValue]=''>Одабери делегата</option>
+                                        <option *ngFor='let d of delegati' [ngValue]='d.username'>{{d.ime}} {{d.prezime}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr><button (click)='dohvatiSportiste()'>Претражи</button></tr>
+                            <tr>
+                                <div *ngIf='format != 1'>
+                                    <div class="container">
+                                        <form [formGroup]="form" (ngSubmit)="submit()">
+                                            <div class="form-group">
+                                                <label for="website">спортисти:</label>
+                                                <div *ngFor="let web of sportisti">
+                                                    <label>
+                                                    <input type="checkbox" [value]="web.ime" (change)="prijavi($event)" />{{web.ime}}</label>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Додај такмичење</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div *ngIf='format == 1'>
+                                    <div class="container">
+                                        <form [formGroup]="form1" (ngSubmit)="submit1()">
+                                            <div class="form-group">
+                                                <label for="website">екипе:</label>
+                                                <div *ngFor="let web of ekipe">
+                                                    <label>
+                                                    <input type="checkbox" [value]="web.zemlja" (change)="prijavi1($event)" />{{web.zemlja}}</label>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary" type="submit" [disabled]="!form1.valid">Додај такмичење</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='col-sm-6'>
+            <h3>Досадашњи рекорди</h3>
+            <table id="customers">
+                <tr>
+                    <th>Година</th>
+                    <th>Место</th>
+                    <th>Дисциплина</th>
+                    <th>Такмичар</th>
+                    <th>Националност</th>
+                    <th>Резултат</th>
+                </tr>
+                <tr *ngFor='let r of rekordi'>
+                    <td>{{r.godina}}</td>
+                    <td>{{r.mesto}}</td>
+                    <td>{{r.disciplina}}</td>
+                    <td>{{r.takmicar}}</td>
+                    <td>{{r.nacional}}</td>
+                    <td>{{r.rekord}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-6'>
+            <h4>одобри захтеве</h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>име</th>
+                    <th>презиме</th>
+                    <th>корисничко име</th>
+                    <th>прихвати</th>
+                </tr>
+                <tr *ngFor='let k of neprihvaceni'>
+                    <td>{{k.ime}}</td>
+                    <td>{{k.prezime}}</td>
+                    <td>{{k.username}}</td>
+                    <td>
+                        <button (click)='prihvatiZahtev(k.username)'>прихвати</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

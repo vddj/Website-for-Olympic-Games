@@ -1,0 +1,53 @@
+<div class="card m-3">
+    <div class="card-body">
+        <h4>Промена лозинке</h4>
+        <form [formGroup]="registerForm" (ngSubmit)="submit()" class='forma'>
+            <div class='form-row'>
+                <div class="col-2">Корисничко име:</div>
+                <div class="form-group col-4">
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Корисничко име је обавезно</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Стара лозинка:</div>
+                <div class="form-group col-4">
+                    <input type="password" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">Стара лозинка је обавезна</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Нова лозинка:</div>
+                <div class="form-group col-4">
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Лозинка је обавезна</div>
+                        <div *ngIf="f.password.errors.minlength">минимун 6 карактера</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Потврди лозинку:</div>
+                <div class="form-group col-4">
+                    <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                        <div *ngIf="f.confirmPassword.errors.required">Потврда лозинке је обавезна</div>
+                        <div *ngIf="f.confirmPassword.errors.mustMatch">Лозинке се не поклапају</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">
+                    <button class="btn btn-primary mr-1">Промени лозинку</button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-secondary" type="reset" (click)="reset()">Обриши</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

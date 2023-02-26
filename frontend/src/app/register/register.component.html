@@ -1,0 +1,96 @@
+<div class="card m-3">
+    <div class="card-body">
+        <h4>Регистрација корисника</h4>
+        <form [formGroup]="registerForm" (ngSubmit)="submit()" class='forma'>
+            <div class='form-row'>
+                <div class="col-2">Корисничко име:</div>
+                <div class="form-group col-4">
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Корисничко име је обавезно</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Име:</div>
+                <div class="form-group col-4">
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">Име је обавезно</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Презиме:</div>
+                <div class="form-group col-4">
+                    <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Презиме је обавезно</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">И-мејл:</div>
+                <div class="form-group col-4">
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">И-мејл је обавезан</div>
+                        <div *ngIf="f.email.errors.email">Неправилан формат и-мејла</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Лозинка:</div>
+                <div class="form-group col-4">
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Лозинка је обавезна</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Потврди лозинку:</div>
+                <div class="form-group col-4">
+                    <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                        <div *ngIf="f.confirmPassword.errors.required">Потврда лозинке је обавезна</div>
+                        <div *ngIf="f.confirmPassword.errors.mustMatch">Лозинке се не поклапају</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Националност:</div>
+                <div class="form-group col-4">
+                    <select formControlName="nacional" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nacional.errors }">
+                        <option *ngFor='let z of zemlje' [ngValue]='z.ime'>{{z.ime}}</option>
+                    </select>
+                    <div *ngIf="submitted && f.nacional.errors" class="invalid-feedback">
+                        <div *ngIf="f.nacional.errors.required">обавензно изабрати земљу</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-2">Тип корисника:</div>
+                <div class="col-3">
+                    <select formControlName="type" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.type.errors }">
+                        <option [ngValue]='2'>делегат</option>
+                        <option [ngValue]='3'>вођа</option>
+                    </select>
+                    <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+                        <div *ngIf="f.type.errors.required">обавензно изабрати тип</div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-row">
+                <div class="col-2">
+                    <button class="btn btn-primary mr-1">Региструјте се</button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-secondary" type="reset" (click)="reset()">Обриши</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card m-3">
+    <div class="card-body">
+        <h4>Пријављивање на систем</h4>
+        <form class='forma'>
+            <table>
+                <tr>
+                    <td>Корисничко име:</td>
+                    <td>
+                        <input type="text" class="form-control" name="username" [(ngModel)]="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Лозинка:</td>
+                    <td>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="btn btn-primary mr-1" (click)="signin()">пријави се</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

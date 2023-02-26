@@ -1,0 +1,83 @@
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-sm-5'>
+            <div class="card m-3">
+                <div class="card-body">
+                    <h4>Претрага спортиста</h4>
+                    <table class='forma'>
+                        <tr>
+                            <td>Име и презиме:</td>
+                            <td><input type='text' class="form-control" name='ime' [(ngModel)]='ime'></td>
+                        </tr>
+                        <tr>
+                            <td>Земља:</td>
+                            <td>
+                                <select name='zemlja' class="form-control" [(ngModel)]='zemlja'>
+                                    <option [ngValue]="" selected>Све земље</option>
+                                    <option *ngFor='let z of zemlje' [ngValue]='z.ime'>{{z.ime}}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Спорт:</td>
+                            <td>
+                                <select name='sport' class="form-control" [(ngModel)]='sport'>
+                                    <option [ngValue]='pomocniSport' selected>Сви спортови</option>
+                                    <option *ngFor='let sp of sportovi' [ngValue]='sp'>{{sp.sport}}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Дисциплина:</td>
+                            <td>
+                                <select name='disciplina' class="form-control" [(ngModel)]='disciplina'>
+                                    <option [ngValue]='' selected>Све дисциплине</option>
+                                    <option *ngFor='let sp of sport.discipline' [ngValue]='sp.naziv'>{{sp.naziv}}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Пол:</td>
+                            <td>
+                                <input type='radio' value='m' name='pol' [(ngModel)]='pol'> M
+                                <input type='radio' value='z' name='pol' [(ngModel)]='pol'> Ж
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type='checkbox' name='medalja' (change)="zaMedalje($event)">само освајачи медаља
+                            </td>
+                        </tr>
+                        <tr><button class="btn btn-primary mr-1" (click)='pretrazi()'>Претражи</button></tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class='col-sm-7'>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <tr>
+                        <th> Име и презиме </th>
+                        <th> Земља </th>
+                        <th> Спорт </th>
+                    </tr>
+                    <tr *ngFor="let s of prikazaniSportisti | paginate: { id: 'foo1', itemsPerPage: poStranici, currentPage: page, totalItems: total}">
+                        <td>{{s.ime}}</td>
+                        <td>{{s.zemlja}}</td>
+                        <td>{{s.sport}}</td>
+                    </tr>
+                </table>
+                <div>
+                    <pagination-controls id='foo1' (pageChange)="page = $event" previousLabel="претходна" nextLabel="следећа"></pagination-controls>
+                </div>
+            </div>
+            <div>
+                Спортиста по страници:
+                <button (click)='promeniBroj(20)'>20</button><button (click)='promeniBroj(50)'>50</button><button (click)='promeniBroj(100)'>100</button>
+            </div>
+
+        </div>
+    </div>
+</div>

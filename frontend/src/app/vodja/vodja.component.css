@@ -1,0 +1,40 @@
+.container-fluid {
+    background: #e4e4e4;
+    padding-top: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.radiodugme {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.forma {
+    background-color: #e4e4e4;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.dugme {
+    width: 200px;
+    border-color: royalblue;
+    background-color: rgb(198, 202, 211);
+}

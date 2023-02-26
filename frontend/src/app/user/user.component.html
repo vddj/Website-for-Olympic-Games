@@ -1,0 +1,17 @@
+<h2>Добро дошли на Летње олимпијске игре у Токију 2021.</h2>
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <div *ngIf='broj == 0'>
+                <img src='assets/naslovna1.png'>
+            </div>
+            <div *ngIf='broj == 1'>
+                <img src='assets/naslovna2.png'>
+            </div>
+            <div *ngIf='broj == 2'>
+                <img src='assets/naslovna3.png'>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="btn btn-secondary" (click)='promeni()'>следећа слика</button>
